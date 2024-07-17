@@ -1,0 +1,4 @@
+body {
+    background: gray url("/static/mainApp/index-background.jpg") no-repeat center;
+    height: 100vh;
+}
