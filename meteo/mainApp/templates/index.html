@@ -1,81 +1,41 @@
 {% extends "wrapper.html" %}
 {% block content %}
-<div style="padding-top:10%;display: none;" id="infoDiv">
-    <div class="center-block" style="width:35%;padding:10px;text-align:center;">
-        <p id="infoLabel">Загрузка...</p>
-        <div id="output">test</div>
-        <button class="btn btn-primary" onclick="new_search()" type="button">Назад</button>
-    </div>
-</div>
 <div style="padding-top:10%;" id="mainDiv">
     <h1 style="text-align:center;padding:10px;">Тестовое задание Python Developer</h1>
     <h4 style="text-align:center;padding:10px;">Получите прогноз погоды в Вашем городе</h4>
+    <p style="text-align:center;padding:10px;">{{error}}</p>
     <div class="center-block" style="width:35%;padding:10px;">
-    <div class="input-group">
-        <input type="text" class="form-control" id="tags" placeholder="Введите город" aria-label="City">
-        <span class="input-group-btn">
-            <button class="btn btn-dark" onclick="search()" type="button">Поиск</button>
-        </span>
+        <form method="post">
+            <div class="input-group">
+                {% csrf_token %}
+                <input type="text" class="form-control" id="tags" name="city" placeholder="Введите город"
+                       aria-label="City">
+                <span class="input-group-btn">
+                <button class="btn btn-dark" type="submit">Поиск</button>
+            </span>
+            </div>
+        </form>
+        <div class="container" style="padding:15px;">
+            <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                <input type="hidden" name="city" value="{{last_city}}" />
+                <i style="color:gray;">Ваш последний поиск </i><input class="btn btn-sm btn-dark" type="submit" value="{{last_city}}" />
+            </form>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <script>
-      $( function() {
-        var availableTags = [
-            {% for city in cities %}
-                "{{city}}",
-            {% endfor %}
-        ];
-        $( "#tags" ).autocomplete({
-          source: availableTags
-        });
-      } );
-
-    function search() { //This function  will be triggered when button will be clicked
-        document.getElementById('mainDiv').style.display = 'none'
-        document.getElementById('infoDiv').style.display = 'block'
-
-        const outputElement = document.getElementById('infoLabel');
-        const apiurl = `https://geocoding-api.open-meteo.com/v1/search?name=${document.getElementById('tags').value}&count=1&language=ru&format=json`
-        fetch(apiurl)
-        .then( response => {
-            outputElement.innerHTML = 'Загрузка...';
-            if(response.ok) {
-                return response;
-            } throw Error(response.statusText);
-        })
-        .then( response => response.json() )
-        .then( data => {
-            if ('results' in data && data.results[0].country_id == 2017370) {
-                outputElement.innerText = data.results[0].name;
-                get_weather_from_python(
-                {'latitude': data.results[0].latitude,
-                'longitude': data.results[0].longitude});
-            }
-            else { outputElement.innerText = 'Такого города не найдено'}
-         })
-        .catch( error => console.log('There was an error:', error))
-      }
-
-    function get_weather_from_python(data) {
-        fetch("{% url 'output' %}", 'text')
-        .then( response => {
-            if(response.ok) {
-                return response;
-            } throw Error(response.statusText);
-        })
-        .then(response => response)
-        .then(data => {
-            alert(data);
-            // Handle the response data
-        });
-    }
-
-    function new_search() { //This function  will be triggered when button will be clicked
-        document.getElementById('mainDiv').style.display = 'block'
-        document.getElementById('infoDiv').style.display = 'none'
-      }
+    $( function() {
+      var availableTags = [
+          {% for city in cities %}
+              "{{city}}",
+          {% endfor %}
+      ];
+      $( "#tags" ).autocomplete({
+        source: availableTags
+      });
+    } );
 </script>
 {% endblock %}

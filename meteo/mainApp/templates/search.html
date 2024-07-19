@@ -1,0 +1,30 @@
+{% extends "wrapper.html" %}
+{% block content %}
+<div style="padding-top:25px;" id="infoDiv">
+    <div class="center-block" style="width:35%;padding:5px;text-align:center;">
+        <h2 id="infoLabel">Температура на неделю вперёд в городе {{city}}</h2>
+        <table class="table table-dark table-striped table-hover table-bordered table-sm">
+            <caption>Погода в городе {{city}}</caption>
+            <thead>
+                <tr>
+                    <th class="text-xs-center">ДЕНЬ</th>
+                    <th class="text-xs-center">ТЕМПЕРАТУРА</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- jinja2 Technique -->
+            {% if data %}
+            {% for i in data %}
+            <tr>
+                <td>{{i.date}}</td>
+                <td>{{i.temperature_2m_max}} ℃</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+        <a href="{% url 'index' %}"><button class="btn btn-primary" type="button">Назад</button></a>
+    </div>
+</div>
+{% endblock %}
+
