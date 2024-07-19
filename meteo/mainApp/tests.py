@@ -7,4 +7,5 @@ def get_weather_city(city):
     response = requests.get(url)
     print(response.json())
 
+
 get_weather_city('Барнаул')

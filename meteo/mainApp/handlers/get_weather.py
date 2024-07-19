@@ -3,10 +3,7 @@ import openmeteo_requests
 import requests_cache
 import pandas as pd
 from retry_requests import retry
-import locale
 import requests
-
-locale.setlocale(locale.LC_ALL, 'Russian_Russia.1251')
 
 
 def get_weather(city):

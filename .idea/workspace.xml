@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cc30da6-487a-4fb1-ae7c-2380395e4e6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/testTaskPyDev.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/handlers/get_weather.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/static/mainApp/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/templates/output.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/templates/wrapper.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/mainApp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/requirements.txt" afterDir="false" />
+    <list default="true" id="3cc30da6-487a-4fb1-ae7c-2380395e4e6a" name="Changes" comment="done">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/testTaskPyDev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testTaskPyDev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/mainApp/handlers/get_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/mainApp/handlers/get_weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/mainApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/mainApp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/mainApp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/mainApp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/mainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/mainApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/meteo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/meteo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2jMW4dj6I60JtdLvh99EmaLMKm9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,12 +45,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python.bomb.executor": "Run",
     "Python.get_weather.executor": "Run",
     "Python.tests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/vicke/PycharmProjects/testTaskPyDev/meteo/mainApp"
+    "last_opened_file_path": "C:/Users/vicke/PycharmProjects/testTaskPyDev/meteo/mainApp",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,6 +60,9 @@
       <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev\meteo\mainApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev" />
+      <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev\meteo" />
+      <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev\meteo\mainApp\static\mainApp" />
       <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev\meteo\mainApp\static" />
       <recent name="C:\Users\vicke\PycharmProjects\testTaskPyDev\meteo\mainApp\handlers" />
     </key>
@@ -105,6 +107,28 @@
       <option name="presentableId" value="Default" />
       <updated>1721197235506</updated>
     </task>
+    <task id="LOCAL-00001" summary="first trying with request on JS">
+      <option name="closed" value="true" />
+      <created>1721227786002</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721227786002</updated>
+    </task>
+    <task id="LOCAL-00002" summary="done">
+      <option name="closed" value="true" />
+      <created>1721358439962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721358439962</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first trying with request on JS" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
 </project>

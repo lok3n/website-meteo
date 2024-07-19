@@ -3,7 +3,7 @@ from .handlers.get_weather import get_weather
 import json
 import locale
 
-locale.setlocale(locale.LC_ALL, 'Russian_Russia.1251')
+locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
 
 
 def index(request):
